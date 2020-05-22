@@ -36,7 +36,7 @@ const setupStep: React.FC<ISetpState> = ({state, addState}) => {
 
     let dropbox: HTMLDivElement
     return <div className="setup-step">
-        <h1>Free V.</h1>
+        <h1>Free-V.</h1>
         <p>Free V is a simple client-side react app thought to help people build their CV very quickly and for <b>FREE</b>. </p>
         <p>My motivation is that when being unemployed and/or needing, or wishing, to get a new job, the last thing you need is to waste time trying to look for a cheap alternative to build your CV fast and decently. Well, I thought, free beats cheap. Besides, there are a bunch of those who chage you like half a dollar for the CV (ok for me), but then charge you with a $25+ fee without even asking, and that's very un pleasant. So, here it is what I've come up until now and I hope it is good for someone. Good luck!</p>
         <ol>
