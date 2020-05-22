@@ -5,7 +5,7 @@ import { JobRelatedInfo } from './JobRelatedInfo';
 import { ICvType, ISection } from '../store/types/CvType';
 
 export function s2p(text:string): JSX.Element {
-  const lineSeparator = "║"
+  const lineSeparator = "|||"
   const parts = text.split(lineSeparator);
   return <div>
     {parts.map(  (part, k) => <p key={k}>{part}</p>)}
