@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import SetupStep from './components/SetupStep'
+import { connect } from 'react-redux';
+import { ICvType } from './store/types/CvType';
+import CVApp from './components/CVApp'
+import { IGlobalState } from './store/store';
 
-function App() {
+interface IAppType{
+  cvState?: ICvType
+}
+const App:React.FC<IAppType> = ({cvState}) => {
+  
+  const isValidState = (s?:ICvType) =>{
+    return s?.JobRelatedInfo
+  }
+
+if(isValidState(cvState)){
+  return <CVApp state={cvState as ICvType}/>
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SetupStep/>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state:IGlobalState) => {
+  return state
+}
+
+export default connect(mapStateToProps, null)(App)

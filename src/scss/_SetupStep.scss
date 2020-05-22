@@ -1,0 +1,36 @@
+.setup-step{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    .drop-setup-json{
+        margin: 0 auto;
+        text-align: center;
+        border: 5px solid #333;
+        height: 500px;
+        border-radius: 5%;
+        padding: 1rem;
+        .target-area{
+            border: 2px dashed #0088ff;
+            height: 100%;
+            display: block;
+            border-radius: 5%;
+            position: relative;
+            h1{
+                top: 40%;
+                left: 0;
+                right: 0;
+                height: 1rem;
+                display: block;
+                position: absolute;
+                text-transform: uppercase;
+            }
+            &:-moz-drag-over{
+                background-color: red;
+            }
+        }
+
+        &.dragging{
+            background-color: #dadada;
+        }
+    }
+}
