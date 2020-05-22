@@ -1,28 +1,67 @@
 .setup-step{
     width: 500px;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    margin: 2rem auto 0;
+    h1{
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: .5rem;
+    }
+    ol{
+        list-style-position: inside;
+        margin-bottom: 1rem;
+        li{
+            font-weight: 700;
+        }
+    }
+    p{
+        font-size: .8rem;
+        margin-bottom: .5rem;
+        b{
+            font-weight: 700;
+        }
+    }
+    a{
+        color: #fff;
+        padding: .2rem .5rem;
+        background: #0088ff;
+        text-decoration: none;
+        border-radius: .5rem;
+        &:hover{
+            background: #0099ff;
+        }
+    }
     .drop-setup-json{
-        margin: 0 auto;
+        opacity: 0.3;
         text-align: center;
         border: 5px solid #333;
-        height: 500px;
-        border-radius: 5%;
+        height: 300px;
+        border-radius: 10px;
         padding: 1rem;
+        text-align: center;
+        margin: 2rem auto 0;
         .target-area{
-            border: 2px dashed #0088ff;
+            border: 2px dashed #333;
             height: 100%;
             display: block;
-            border-radius: 5%;
+            border-radius: 10px;
             position: relative;
             h1{
-                top: 40%;
+                top: 45%;
                 left: 0;
                 right: 0;
-                height: 1rem;
+                line-height: 1.2;
+                padding: .5rem;
                 display: block;
                 position: absolute;
-                text-transform: uppercase;
+                color: white;
+                background: #333;
+                font-size: 1.2em;
+                margin: 0 auto;
+                max-width: 300px;
+                border-radius: 1rem;
+                font-weight: 800;
             }
             &:-moz-drag-over{
                 background-color: red;
@@ -31,6 +70,7 @@
 
         &.dragging{
             background-color: #dadada;
+            opacity: 1;
         }
     }
 }

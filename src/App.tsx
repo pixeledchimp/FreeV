@@ -15,7 +15,7 @@ const App:React.FC<IAppType> = ({cvState}) => {
   }
 
 if(isValidState(cvState)){
-  return <CVApp state={cvState as ICvType}/>
+  return <CVApp {...cvState}/>
 }
   return (
     <div className="App">
