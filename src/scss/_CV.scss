@@ -10,7 +10,7 @@
 ul{
     list-style: none;
 }
-img{
+.pic{
     border: 2px solid #fff;
     max-width: 100%;
     border-radius: 50%;
@@ -26,6 +26,9 @@ html, body{
 p{
     margin-bottom: 1rem;
 }
+td{
+    vertical-align: top;
+}
 .CVApp {
     max-width: 1200px;
     margin: 0 auto;
@@ -36,8 +39,9 @@ p{
       padding: 1rem;
     }
     .quickInfo{
-        width: 30%;
+        vertical-align: top;;
         background-color: #fafafa;
+        padding: 1rem;
         > div{
             margin-bottom: 2rem;
             h3{

@@ -15,8 +15,16 @@ export function s2p(text:string): JSX.Element {
 export default (props:ICvType) => {
   return (
     <div className="CVApp">
-      <QuickInfo sections={props.QuickInfo as ISection[]}/>
-      <JobRelatedInfo sections={props.JobRelatedInfo as ISection[]}/>
+      <table>
+        <tbody>
+        <tr>
+          <td>
+          <QuickInfo sections={props.QuickInfo as ISection[]}/>
+          </td>
+          <td><JobRelatedInfo sections={props.JobRelatedInfo as ISection[]}/></td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

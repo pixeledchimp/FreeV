@@ -25,7 +25,7 @@ export const JobRelatedInfo: React.FC<IJobRelatedInfo> = ({sections}) => <div cl
                 <h3><span className="icon"><FontAwesomeIcon icon={faBriefcase}/></span>{s.Title}</h3>
                 {entities.map( (e,k) => <div className="entity" key={k}>
                     <ul>
-                        <li><h3>{e.EntityName}</h3></li>
+                        <li><h3 dangerouslySetInnerHTML={{ __html: e.EntityName }}></h3></li>
                         <li><b>Start date:</b> {e.StartDate}</li>
                         <li><b>Start date:</b> {e.EndDate}</li>
                         <li><b>{e.Role}</b></li>

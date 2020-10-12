@@ -3,6 +3,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import React from "react"
 import { ISection, IBrief, IPersonalInfo, ILanguageSkill, IInterest } from '../store/types/CvType'
 import { s2p } from './CVApp'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 
 interface IQuickInfo{
     sections: ISection[]
@@ -13,7 +15,15 @@ export const QuickInfo: React.FC<IQuickInfo> = ({sections}) => <div className="q
         if(s.IsVisible &&  typeof (s.Content as any).Picture !== "undefined"){
             const content = s.Content as IBrief
             return <div className="brief" key={key}>
-                <div className="pic"><img src={content.Picture} alt="Candidate"/></div>
+                <div className="pic" css={css`
+                    background: url(${content.Picture});
+                    background-position: center;
+                    background-size: cover;
+                    height: 200px;
+                    width: 200px;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                `}></div>
                 <h3>{content.Name} {content.LastName}</h3>
                 <div className="description">
                     {s2p(content.Description)}
